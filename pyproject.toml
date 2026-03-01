@@ -1,6 +1,6 @@
 [project]
 name = "qwen3-vl-fork"
-version = "0.0.0"
+version = "0.1.0"
 authors = [
     { name = "akawincent", email = "liwenpu0520@gmail.com" },
 ]
@@ -16,7 +16,7 @@ dependencies = [
   "requests",
   "torch>=2.1.0",
   "torchvision",
-  # README notes Qwen3-VL requires transformers >= 4.57.0
+  "transformers>=4.57.0",
   "torchvision>=0.16.0",
   "qwen-vl-utils>=0.0.14",
   "flash-attn>=2.8.3",
@@ -26,17 +26,13 @@ dependencies = [
   "opencv-python>=4.13.0.92",
   "matplotlib>=3.10.8",
   "decord>=0.6.0",
-  "qwen-agent>=0.0.33",
+  "qwen-agent[gui]>=0.0.33",
+  "soundfile>=0.13.1",
+  "markdown>=3.10.2",
+  "bs4>=0.0.2",
 ]
 
 [project.optional-dependencies]
-# Matches the repo's Gradio web demo entry point `web_demo_mm.py`.
-web-demo = [
-  "gradio==5.49.1",
-  "gradio_client==1.13.3",
-  "transformers-stream-generator==0.0.5",
-]
-
 # Minimal set for running scripts under `qwen-vl-finetune/` (training deps are GPU/CUDA-specific).
 finetune = [
   "deepspeed",
