@@ -1,1 +1,71 @@
+# Dependency locks kept local in this repo
 uv.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.Python
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+._*
+
+# Logs
+*.log
+logs/
+
+# Local env files
+.env
+.env.*
+
+# Training / evaluation outputs
+output/
+outputs/
+checkpoints/
+cache/
+results/
+wandb/
+runs/
+
+# Model artifacts
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.safetensors
